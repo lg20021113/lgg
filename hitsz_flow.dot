@@ -1,0 +1,128 @@
+digraph G {
+  rankdir=LR;
+  node [shape=box, style=filled, fillcolor=lightblue, fontname="SimSun"];
+  edge [fontname="SimSun"];
+
+  // 时间节点
+  t1999 [label="1999年", shape=oval, fillcolor=lightgreen];
+  t2004 [label="2004年", shape=oval, fillcolor=lightgreen];
+  t2004_2009 [label="2004-2009年", shape=oval, fillcolor=lightgreen];
+
+  // 地点节点
+  place_sz [label="深圳", shape=hexagon, fillcolor=lightyellow];
+  place_hgd [label="哈尔滨工业大学(深圳)", shape=hexagon, fillcolor=lightyellow];
+  place_village [label="村产业园(硅谷产业园)", shape=hexagon, fillcolor=lightyellow];
+
+  // 机构/组织节点
+  org_gao [label="固高科技公司", fillcolor=pink];
+  org_come [label="自动控制与机电工程学科部\n(CoME)", fillcolor=pink];
+  org_parallax [label="比銳(Parallex)公司", fillcolor=pink];
+  org_asmp [label="ASMP PT\n(半导体封装设备领军企业)", fillcolor=pink];
+  org_sae [label="新科磁电SAE\n(日本TDK子公司)", fillcolor=pink];
+  org_3126 [label="3126实验室公司", fillcolor=pink];
+  org_dji [label="大疆", fillcolor=pink];
+
+  // 人物节点
+  person_wu [label="吴宏", shape=ellipse, fillcolor=lightcyan];
+  person_xie [label="谢旭辉", shape=ellipse, fillcolor=lightcyan];
+  person_lv [label="吕战争", shape=ellipse, fillcolor=lightcyan];
+  person_wang [label="王树国(校长)", shape=ellipse, fillcolor=lightcyan];
+  person_qiu [label="丘立(港科大)", shape=ellipse, fillcolor=lightcyan];
+  person_wangy [label="王煜(港中文)", shape=ellipse, fillcolor=lightcyan];
+  person_zhou [label="周克敏(美国高校)", shape=ellipse, fillcolor=lightcyan];
+  person_lin [label="林威(美国高校)", shape=ellipse, fillcolor=lightcyan];
+  person_lou [label="楼云江", shape=ellipse, fillcolor=lightcyan];
+  person_zhu [label="朱晓蕊", shape=ellipse, fillcolor=lightcyan];
+  person_li [label="李建刚", shape=ellipse, fillcolor=lightcyan];
+  person_peter [label="Peter Liu(CTO)", shape=ellipse, fillcolor=lightcyan];
+  person_cheng [label="程炜", shape=ellipse, fillcolor=lightcyan];
+  
+  // 教育理念节点
+  concept_brown [label="G.Brown办学方针:\n科学主导工程\n理论教学与动手实践相结合", shape=diamond, fillcolor=lightsalmon];
+  
+  // 课程节点
+  course_math [label="数理基础课程:\n实分析、线性代数、微分流型", fillcolor=lavender];
+  course_prof [label="专业基础课程:\n控制系统设计、鲁棒控制\n非线性控制、机械系统设计", fillcolor=lavender];
+  course_intern [label="企业实习和硕士论文", fillcolor=lavender];
+  
+  // 产品/技术节点
+  tech_led [label="LED封装设备", fillcolor=lightgray];
+  tech_wire [label="焊线机(Wire bonding)", fillcolor=lightgray];
+  
+  // 事件节点
+  event_found_gao [label="创办固高科技", shape=oval];
+  event_found_come [label="创办CoME学科部", shape=oval];
+  event_edu_reform [label="教改班培养方案设计", shape=oval];
+  event_lab_build [label="学生帮助搭建实验室", shape=oval];
+  event_found_parallax [label="成立比銳公司", shape=oval];
+  event_invest [label="获得外部投资", shape=oval];
+  event_crisis [label="创始成员闹矛盾罢工", shape=oval, fillcolor=lightpink];
+  event_fail [label="公司失败", shape=oval, fillcolor=lightpink];
+  event_recovery [label="八位同学创办八家公司", shape=oval];
+  event_impact [label="六届教改班\n创办40家公司\n估值过400亿\n创造就业4000多", shape=oval, fillcolor=lightgreen];
+  
+  // 结果/成就节点
+  achievement [label="中国半导体封装设备产业\n半壁江山出自哈工深教改班", shape=star, fillcolor=gold];
+  
+  // 关系定义
+  t1999 -> event_found_gao;
+  event_found_gao -> org_gao;
+  place_sz -> event_found_gao;
+  person_wu -> event_found_gao;
+  person_xie -> event_found_gao;
+  person_lv -> event_found_gao;
+  
+  t2004 -> event_found_come;
+  place_hgd -> event_found_come;
+  person_wang -> event_found_come;
+  event_found_come -> org_come;
+  
+  org_come -> person_qiu;
+  org_come -> person_wangy;
+  org_come -> person_zhou;
+  org_come -> person_lin;
+  org_come -> person_lou;
+  org_come -> person_zhu;
+  org_come -> person_li;
+  
+  concept_brown -> event_edu_reform;
+  event_edu_reform -> course_math;
+  event_edu_reform -> course_prof;
+  event_edu_reform -> course_intern;
+  event_edu_reform -> event_lab_build;
+  
+  course_intern -> org_asmp;
+  course_intern -> org_sae;
+  course_intern -> org_3126;
+  course_intern -> org_gao;
+  course_intern -> org_dji;
+  
+  org_asmp -> person_peter;
+  person_peter -> tech_led;
+  tech_wire -> tech_led [label="传统技术不满足需求"];
+  
+  tech_led -> event_found_parallax;
+  person_peter -> event_found_parallax [label="建议"];
+  person_cheng -> event_found_parallax;
+  event_found_parallax -> org_parallax;
+  org_parallax -> event_invest;
+  
+  place_village -> org_parallax;
+  place_village -> org_dji [label="同栋楼"];
+  
+  org_parallax -> event_crisis;
+  event_crisis -> event_fail;
+  event_fail -> event_recovery [label="沉寂一年多后"];
+  
+  t2004_2009 -> event_impact;
+  event_impact -> achievement;
+
+  // 启发/反思节点
+  lesson1 [label="启发1: 创业团队内部团结\n至关重要", shape=plaintext, fontcolor=red];
+  lesson2 [label="启发2: 产学研结合培养\n创新创业人才有效", shape=plaintext, fontcolor=red];
+  lesson3 [label="启发3: 失败后重新站起来\n才是真正的成功", shape=plaintext, fontcolor=red];
+  
+  event_crisis -> lesson1;
+  concept_brown -> lesson2;
+  event_recovery -> lesson3;
+} 

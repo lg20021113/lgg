@@ -1,0 +1,235 @@
+{
+    "t1999": {
+        "description": "1999年在深圳创办固高科技公司时，只有吴宏，谢旭辉、吕战争等博士后、访问学者（学生）愿意参与。",
+        "photo_paths": []
+    },
+    "t2004": {
+        "description": "2004年，哈工大、北大、清华在深圳创办研究生院。与王树国校长沟通后由我领衔创办哈工深 自动控制与机电工程（Control and  Mechatronic Eng, CoME) 学科部。"
+    },
+    "t2004_2009": {
+        "description": "李老师在哈尔滨工业大学深圳研究生院领衔创办了哈工深自动控制与机电工程（Control and  Mechatronic Eng, CoME) 学科部"
+    },
+    "place_sz": {
+        "description": "1999年在深圳创办固高科技",
+        "photo_paths": [
+            "hitsz_shenzhen.jpg"
+        ]
+    },
+    "place_hgd": {
+        "description": "2004年，哈工大、北大、清华在深圳创办研究生院。",
+        "photo_paths": [
+            "hitsz_hitsz.jpg"
+        ]
+    },
+    "place_village": {
+        "description": "比锐早期公司运营选择在哈工深旁边的村产业园（号称硅谷产业园）",
+        "photo_paths": [
+            "hitsz_guigu.jpg",
+            "hitsz_birui.jpg"
+        ]
+    },
+    "org_gao": {
+        "description": "固高科技于1999年由李泽湘教授创办，是亚太地区首家拥有自主知识产权, 专业从事运动控制及智能制造核心技术研究与开发的高科技企业，是国内外全互联智能制造综合解决方案提供商之一。",
+        "photo_paths": [
+            "hitsz_gugao.jpg"
+        ]
+    },
+    "org_come": {
+        "description": "哈工深 自动控制与机电工程（Control and  Mechatronic Eng, CoME) 学科部",
+        "photo_paths": [
+            "hitsz_7.png",
+            "hitsz_coME.jpg"
+        ]
+    },
+    "org_parallax": {
+        "description": "比锐精密设备（深圳）有限公司，成立于2007年12月",
+        "photo_paths": [
+            "hitsz_birui.jpg"
+        ]
+    },
+    "org_asmp": {
+        "description": "CoME教改班第三学年的企业实习的合作企业。这是一家香港企业，是半导体封装设备领军企业，沙头角从铸造到机器装配一条龙，由CTO Peter Liu亲自带队指导学生",
+        "photo_paths": [
+            "hitsz_15.png"
+        ]
+    },
+    "org_sae": {
+        "description": "CoME教改班第三学年的企业实习的合作企业。\n日本TDK 子公司，ATL兄弟公司",
+        "photo_paths": [
+            "hitsz_16.png"
+        ]
+    },
+    "org_3126": {
+        "description": "CoME教改班第三学年的企业实习的合作企业与机构，香港科技大学3126实验室",
+        "photo_paths": [
+            "hitsz_3126.jpg"
+        ]
+    },
+    "org_dji": {
+        "description": "CoME教改班第三学年的企业实习的合作企业与机构，无人机行业领导者与革新者",
+        "photo_paths": [
+            "hitsz_12.png"
+        ]
+    },
+    "person_wu": {
+        "description": "固高科技的创始成员之一"
+    },
+    "person_xie": {
+        "description": "固高科技的创始成员之一"
+    },
+    "person_lv": {
+        "description": "固高科技的创始成员之一"
+    },
+    "person_wang": {
+        "description": "2004年时任哈工大深研院校长",
+        "photo_paths": [
+            "hitsz_wangshuguo.jpg"
+        ]
+    },
+    "person_qiu": {
+        "description": "哈工深 CoME学科部早期参与创办的教授成员之一",
+        "photo_paths": [
+            "hitsz_qiuli.jpg"
+        ]
+    },
+    "person_wangy": {
+        "description": "哈工深 CoME学科部早期参与创办的教授成员之一",
+        "photo_paths": [
+            "hitsz_wangyu.jpg"
+        ]
+    },
+    "person_zhou": {
+        "description": "哈工深 CoME学科部早期参与创办的教授成员之一",
+        "photo_paths": [
+            "hitsz_zhoukemin.jpg"
+        ]
+    },
+    "person_lin": {
+        "description": "哈工深 CoME学科部早期参与创办的教授成员之一",
+        "photo_paths": [
+            "hitsz_linwei.jpg"
+        ]
+    },
+    "person_lou": {
+        "description": "哈工深 CoME学科部早期参与创办的年轻教师之一",
+        "photo_paths": [
+            "hitsz_louyunjiang.jpg"
+        ]
+    },
+    "person_zhu": {
+        "description": "哈工深 CoME学科部早期参与创办的年轻教师之一",
+        "photo_paths": [
+            "hitsz_zhuxiaorui.jpg"
+        ]
+    },
+    "person_li": {
+        "description": "哈工深 CoME学科部早期参与创办的年轻教师之一"
+    },
+    "person_peter": {
+        "description": "香港 半导体封装设备领军企业ASMP PT的 CTO，参与指导哈工深CoME学生第三学年的企业实习",
+        "photo_paths": [
+            "hitsz_15.png"
+        ]
+    },
+    "person_cheng": {
+        "description": "哈工深 CoME学科部2005级学生，比锐创始人之一，担任比锐公司总经理",
+        "photo_paths": [
+            "hitsz_chengwei.jpg"
+        ]
+    },
+    "concept_brown": {
+        "description": "哈工深CoME依照 G.Brown办学方针 “科学主导工程、以及理论教学与动手实践相结合”来设计研究生培养方案。",
+        "photo_paths": [
+            "hitsz_13.png"
+        ]
+    },
+    "course_math": {
+        "photo_paths": [
+            "hitsz_14.png",
+            "hitsz_9.png",
+            "hitsz_lesson.jpg"
+        ]
+    },
+    "course_prof": {
+        "photo_paths": [
+            "hitsz_14.png",
+            "hitsz_9.png",
+            "hitsz_lesson.jpg"
+        ]
+    },
+    "course_intern": {
+        "description": "哈工深CoME教改班的学生第三学年的培养计划",
+        "photo_paths": [
+            "hitsz_16.png",
+            "hitsz_15.png",
+            "hitsz_13.png"
+        ]
+    },
+    "tech_led": {
+        "description": "LED 产业快速崛起，但传统芯片封装用的焊线机 （Wire bonding）满足不了LED 焊线的要求 （LED芯片只有3-4根线，但速度要求快）。",
+        "photo_paths": [
+            "hitsz_ledmachine.jpg"
+        ]
+    },
+    "tech_wire": {
+        "description": "LED 焊线机",
+        "photo_paths": [
+            "hitsz_ledmachine.jpg",
+            "hitsz_ax2300.jpg"
+        ]
+    },
+    "event_found_gao": {
+        "description": "1999年在深圳创办固高科技公司时，只有吴宏，谢旭辉、吕战争等博士后、访问学者（学生）愿意参与。",
+        "photo_paths": [
+            "hitsz_gugao.jpg"
+        ]
+    },
+    "event_found_come": {
+        "photo_paths": [
+            "hitsz_7.png"
+        ]
+    },
+    "event_edu_reform": {
+        "photo_paths": [
+            "hitsz_9.png"
+        ]
+    },
+    "event_lab_build": {
+        "photo_paths": [
+            "hitsz_11.png"
+        ]
+    },
+    "event_found_parallax": {
+        "photo_paths": [
+            "hitsz_birui.jpg",
+            "hitsz_chengwei.jpg"
+        ]
+    },
+    "event_invest": {
+        "photo_paths": [
+            "hitsz_birui2.jpg"
+        ]
+    },
+    "event_crisis": {
+        "photo_paths": [
+            "hitsz_biruimember.jpg"
+        ]
+    },
+    "event_recovery": {
+        "photo_paths": [
+            "hitsz_biruimem.jpg"
+        ]
+    },
+    "event_impact": {
+        "photo_paths": [
+            "hitsz_10.png",
+            "hitsz_chuangye.jpg"
+        ]
+    },
+    "achievement": {
+        "photo_paths": [
+            "hitsz_18.png",
+            "hitsz_10.png"
+        ]
+    }
+}

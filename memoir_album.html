@@ -1,0 +1,400 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李老师照片墙</title>
+    <!-- 删除原有的图标引用 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&amp;display=swap">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: "Source Sans Pro", sans-serif;
+        }
+        html,
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            overflow: hidden;
+            transition: background-image 0.7s ease-in-out;
+        }
+        .shell{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background: rgba(99, 99, 99, 0.8);
+        }
+        .button{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 350px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 150px;            
+        }
+        .prev,
+        .next{
+            transition: transform 0.25s ease;
+            z-index: 99999;
+            bottom: 5px;
+        }
+
+        .prev i,
+        .next i{
+            font-size: 60px;
+            color: #fff;
+            cursor: pointer;
+            text-shadow: 0 0 10px #ffffff;
+        }
+        .shell_body {
+            width: 100%;
+            padding: 20px 0 150px 0;
+        }
+        .shell_slider{
+            position:relative;
+            transition: transform 1s ease-in-out;
+            background: transparent;
+        }
+        .item{
+            position: relative;
+            float: left;
+            margin: 0 20px;
+        }
+
+        .frame{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s ease-in-out;
+            transform-style: preserve-3d;
+        }
+        .frame:after{
+            content: '';
+            position: absolute;
+            bottom: -16%;
+            width: 100%;
+            height: 60px;
+            background: #ffffff1c;
+            box-shadow: 0 0 15px 5px #ffffff1c;
+            transform: rotateX(90deg) translate3d(0px, -20px, 0px);
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 4px solid #fff;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        .box h1,
+        .box span {
+            color: #fff;
+            transform: translateZ(20px);
+        }
+        .box h1{
+            text-shadow: 0 0 30px #1f05b4;
+            font-size: 55px;
+            margin-bottom: 30px;
+            /* white-space: nowrap;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis; */
+        }
+        .box span{
+            position: absolute;
+            bottom: 35px;
+            padding: 0 25px;
+            text-shadow: 0 0 10px #1f05b4;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .front,
+        .left,
+        .right{
+            box-shadow: 0 0 50px #ffffff;
+            background-size: cover;
+        }
+        
+        .right,
+        .left{
+            top: 0;
+            width: 60px;
+            backface-visibility: hidden;
+        }
+
+        .left{
+            left: 0;
+            border-left-width: 5px;
+            transform: translate3d(1px, 0, -60px) rotateY(-90deg);
+            transform-origin: 0%;
+        }
+        .right{
+            right: 0;
+            border-right-width: 5px;
+            transform: translate3d(-1px, 0, -60px) rotateY(90deg);
+            transform-origin: 100%;
+        } 
+    </style>
+</head>
+<body>
+    <div class="shell">
+        <div class="shell_body">
+            <div class="button">
+                <div class="prev"><i class="fas fa-chevron-left"></i></div>
+                <div class="next"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="shell_slider">
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>李家</h1>
+                            <span>1961年至今</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>路家</h1>
+                            <span>1964年至今</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>中南矿冶学院</h1>
+                            <span>1978-1979</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>出国前后</h1>
+                            <span>1979-1980</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>CMU同学</h1>
+                            <span>1979-1983</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>Host Family: Michael&Joanne</h1>
+                            <span>1980</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>运动、intern、讲学</h1>
+                            <span>1983-1987</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>毕业典礼</h1>
+                            <span>1983.05</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>ALCOA</h1>
+                            <span>1979-1983</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>Berkeley</h1>
+                            <span>1983-1989</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>NYU</h1>
+                            <span>1990-1992</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>3126实验室</h1>
+                            <span>1992至今</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>固高</h1>
+                            <span>1999至今</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front">
+                            <h1>大疆</h1>
+                            <span>2006至今</span>
+                        </div>
+                        <div class = "box left"></div>
+                        <div class = "box right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var items = document.getElementsByClassName('item');
+    for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        var frame = item.getElementsByClassName('frame')[0];
+        var frontBox = frame.getElementsByClassName('front')[0];
+        var leftBox = frame.getElementsByClassName('left')[0];
+        var rightBox = frame.getElementsByClassName('right')[0];
+        frontBox.style.backgroundImage = 'url(./' + (i+1) + '.jpg)';
+        leftBox.style.backgroundImage = 'url(./2.jpg)';
+        rightBox.style.backgroundImage = 'url(./3.jpg)';
+    }
+    (function(){
+        "use strict";
+        var shell = document.getElementsByClassName('shell')[0];
+        var slider = document.getElementsByClassName('shell_slider')[0];
+        var items = document.getElementsByClassName('item');
+        var prevBtn = document.getElementsByClassName('prev')[0];
+        var nextBtn = document.getElementsByClassName('next')[0];
+        
+        var width, height, totalWidth, margin = 20,
+            currIndex = 0,
+            iterval, IntervalTime = 3000;
+
+        function init(){
+            console.log('网页初始化开始...');
+            console.log('窗口宽度:', window.innerWidth);
+            console.log('窗口高度:', window.innerHeight);
+            
+            resize();
+            move(Math.floor(items.length / 2));
+            bindEvents();
+            timer();
+            
+            console.log('初始化完成');
+            console.log('总照片数量:', items.length);
+            console.log('当前显示索引:', currIndex);
+        }
+        function resize(){
+            width = Math.max(window.innerWidth * .35, 275);
+            height = width * (9/16);
+            totalWidth = width * items.length;
+            slider.style.width = totalWidth + 'px';
+            
+            for (var i = 0; i < items.length; i++){
+                let item = items[i];
+                item.style.width = (width - (margin*2)) + 'px';
+                item.style.height = height + 'px';
+            }
+        }
+        function bindEvents(){
+            window.onresize = resize;
+            prevBtn.addEventListener('click', () => {prev(); });
+            nextBtn.addEventListener('click', () => {next(); });
+        }
+        init();
+        function move(index){
+            if (index < 1) index = items.length;
+            if (index >= items.length) index = 0;
+            currIndex = index;
+            for(var i = 0; i < items.length; i++){
+                let item = items[i];
+                let box = item.getElementsByClassName('frame')[0];
+                if (i == (index - 1)) {
+                    item.classList.add("item--active");
+                    box.style.transform = 'perspective(1200px)';
+                } else {
+                    item.classList.remove("item--active");
+                    box.style.transform = 'perspective(1000px) rotateY(' + (i < (index - 1) ? 40 : -40) + 'deg)';
+                }
+            }
+            slider.style.transform = 'translate3d(' + ((index * -width) + (width / 2) + window.innerWidth / 2) + 'px, 0px, 0px)';
+            var frontBox = items[index - 1].getElementsByClassName('front')[0];
+            document.body.style.backgroundImage = frontBox.style.backgroundImage;
+        }
+        function timer(){
+            clearInterval(iterval);
+            iterval = setInterval(() => {
+                move(++currIndex);
+            }, IntervalTime);
+        }
+        function prev(){
+            console.log('点击了上一张按钮');
+            console.log('当前索引从', currIndex, '变为', currIndex-1);
+            move(--currIndex);
+            timer();
+        }
+        function next(){
+            console.log('点击了下一张按钮');
+            console.log('当前索引从', currIndex, '变为', currIndex+1);
+            move(++currIndex);
+            timer();
+        }
+    })();
+</script>

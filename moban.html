@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html moban="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="moban.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 相框 -->
+        <div class="photo-section">
+            <div class="photo-container">
+                <img src="picture/楼云江教授.png" alt="Overlay Image">
+            </div>
+            <div class="name-label"></div>
+        </div>
+    </div>
+
+    <div class="text-section">
+        <!-- 左边按钮 -->
+        <div class="navigation-buttons">
+            <div class="button-group">
+                <button onclick="goToPrevious()"></button>
+            </div>
+        </div>
+
+        <!-- 文本框 -->
+        <div class="text-box">
+            <input type="text" placeholder="文本" readonly>
+        </div>
+
+        <!-- 右边按钮 -->
+        <div class="navigation-buttons">
+            <div class="button-group">
+                <button onclick="goToNext()"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="moban.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin: 0 auto; /* 居中显示 */
+}
+
+.photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-container {
+    width: 400px; /* 固定宽度 */
+    height: 400px; /* 固定高度 */
+    padding: 10px; /* 容器比照片稍大 */
+    background-image: url('rq2.png'); /* 设置背景为 rq2.png */
+    background-size: contain; /* 背景图片根据容器大小调整，保持比例 */
+    background-position: center; /* 背景图片居中 */
+    background-repeat: no-repeat; /* 背景图片不重复 */
+    border-radius: 5px; /* 边框圆角半径为5像素 */
+    overflow: hidden; /* 超出容器范围的内容隐藏 */
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直方向上居中对齐内容 */
+    justify-content: center; /* 水平方向上居中对齐内容 */
+}
+
+
+.text-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    margin: 20px auto;
+    gap: 5vw;
+}
+
+.text-box {
+    width: 40vw;
+    height: 30vh;
+    background-image: url('text.png');
+    background-size: 100% 100%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: relative;
+    margin: 0;
+}
+
+.text-box input {
+    width: 80%;
+    height: 70%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    background: transparent;
+}
+
+.navigation-buttons {
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+}
+
+.navigation-buttons button {
+    padding: 0; /* 移除内边距 */
+    font-size: 16px;
+    border: none; /* 移除边框 */
+    cursor: pointer;
+    white-space: nowrap;
+    background-size: cover; /* 确保图片完全覆盖按钮 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent; /* 设置背景为透明 */
+    width: 8vw; /* 按钮宽度 */
+    height: 8vw; /* 按钮高度，保持正方形 */
+    min-width: 50px; /* 最小宽度 */
+    min-height: 50px; /* 最小高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000; /* 按钮文字颜色 */
+}
+
+.text-section > .navigation-buttons:first-child button {
+    background-image: url('jump2.png'); /* 左侧按钮图标 */
+}
+
+.text-section > .navigation-buttons:last-child button {
+    background-image: url('jump.png'); /* 右侧按钮图标 */
+}
+
+.navigation-buttons button:hover {
+    opacity: 0.8; /* 悬停时透明度变化 */
+}
+
+.name-label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
